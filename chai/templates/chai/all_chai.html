@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chai page
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Header -->
+<h1 class="text-3xl font-bold text-center text-white bg-gradient-to-r from-indigo-600 to-blue-500 py-4 rounded-b-xl shadow-md">
+ Brewed with Love, Served with Code – Welcome to sn_codeLab!
+</h1>
+
+<!-- Grid Layout -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 m-4">
+  {% for chai in chais %}
+  <div class="bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden text-center">
+    
+    <!-- Image -->
+    <img class="h-32 w-full object-cover" src="{{chai.image.url}}" alt="No image available">
+
+    <!-- Content -->
+    <div class="p-3">
+      <h3 class="">{{chai.name}}</h3>
+
+      <a href="{% url 'chai_detail' chai.id %}">
+        <button class="bg-sky-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition">
+          {{chai.chai_type}} - #{{chai.id}}
+        </button>
+       
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+
+
+{% endblock %}

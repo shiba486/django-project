@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chai Detail Page
+{% endblock %}
+
+{% block content %}
+
+<div class="max-w-5xl mx-auto px-6 py-12">
+  <h1 class="text-4xl font-bold text-center text-indigo-800 mb-12">🍵 Chai Detail Page</h1>
+
+  <div class="bg-white rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+    <!-- Image Section -->
+    <div class="relative h-80 md:h-auto">
+      <img src="{{chai.image.url}}" alt="Chai Image Not Found" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-t-3xl md:rounded-none md:rounded-l-3xl"></div>
+      <div class="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow-lg">
+        Freshly Brewed Happiness
+      </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="p-8 flex flex-col justify-between">
+      <div class="space-y-4">
+        <h2 class="text-3xl font-bold text-indigo-700">{{chai.name}}</h2>
+        <p class="text-sm uppercase tracking-widest font-semibold text-indigo-500">{{chai.chai_type}}</p>
+        <p class="text-gray-700 leading-relaxed">{{chai.description}}</p>
+      </div>
+      
+      <div class="mt-8 flex items-center justify-between">
+        <p class="text-2xl font-bold text-green-600">৳{{chai.price}}</p>
+      <a href="{% url 'chai' %}">
+      <button class="bg-lime-600 text-secondary px-8 py-3 rounded-lg font-semibold hover:bg-blue-950 transition">Order</button>
+
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

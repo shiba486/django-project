@@ -1,0 +1,243 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block content %}
+
+
+ <section class="hero-gradient py-20 md:py-32">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-24">
+      
+      <!-- Text Content -->
+      <div class="max-w-2xl text-center lg:text-left">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+          Build Your Dream Website <br class="hidden sm:inline-block" />
+          <span class="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">With Creativity & Code</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">
+          We design and develop modern, high-performance websites that grow your brand and connect with customers.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+          <a href="{% url 'services' %}"
+             class="inline-flex items-center justify-center px-6 py-3 text-white font-semibold rounded-xl bg-gradient-to-r from-blue-500 to-blue-700 shadow-md hover:from-blue-600 hover:to-blue-800 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
+            <i class="fas fa-rocket mr-3"></i>
+            Get Started
+          </a>
+          <a href="{% url 'about' %}"
+             class="inline-flex items-center justify-center px-6 py-3 text-white font-semibold rounded-xl bg-gradient-to-r from-cyan-400 to-teal-500 shadow-md hover:from-cyan-500 hover:to-teal-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-300">
+            <i class="fas fa-play-circle mr-3"></i>
+            Watch Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="relative w-full max-w-md lg:max-w-2xl">
+        <div class="overflow-hidden rounded-2xl shadow-xl">
+          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+               alt="Web Development"
+               class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105" />
+        </div>
+        <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-primary/10 rounded-full z-[-1]"></div>
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full z-[-1]"></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Features Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center text-3xl sm:text-4xl font-bold text-gray-900">
+                    Our Premium Services
+                </h2>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    Tailored solutions designed to make your brand shine in the digital landscape
+                </p>
+            </div>
+            
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="service-card bg-white p-8 rounded-2xl">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Web Design</h3>
+                    <p class="text-gray-600 text-center mb-4">
+                        Modern, mobile-friendly, and user-centered design that captivates your audience.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>UI/UX Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Responsive Layouts</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Brand Identity</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-2xl">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Development</h3>
+                    <p class="text-gray-600 text-center mb-4">
+                        Fast, scalable, and maintainable code tailored to your business requirements.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Frontend & Backend</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>E-commerce Solutions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>API Integrations</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-2xl">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">SEO Optimization</h3>
+                    <p class="text-gray-600 text-center mb-4">
+                        Increase traffic and visibility with data-driven SEO strategies and analytics.
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Keyword Research</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Content Strategy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i>
+                            <span>Performance Tracking</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="{% url 'services' %}" class="inline-flex items-center text-primary font-medium hover:text-primary-dark">
+                    Explore all services
+                    <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-indigo-50 to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center text-3xl sm:text-4xl font-bold text-gray-900">
+                    Client Success Stories
+                </h2>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it - hear what our clients have to say
+                </p>
+            </div>
+            
+            <div class="grid gap-8 md:grid-cols-3">
+                <div class="testimonial-card p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Sarah" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">Sarah M.</h4>
+                            <p class="text-primary text-sm">Startup Founder</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        “They built us an amazing website that truly represents our brand. The team was fast, reliable, and super friendly throughout the entire process.”
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D" alt="David" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">David P.</h4>
+                            <p class="text-primary text-sm">Marketing Lead</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        “Professional team and top-quality work! We saw a 45% increase in organic traffic and 30% boost in conversions after their SEO optimization.”
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D" alt="Ayesha" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">Ayesha K.</h4>
+                            <p class="text-primary text-sm">Product Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        “Our project was delivered on time with excellent communication. The creativity and technical expertise exceeded our expectations.”
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#" class="inline-flex items-center justify-center px-8 py-3 text-white font-medium bg-gradient-to-r from-primary to-primary-dark rounded-xl shadow-lg hover:shadow-xl transition focus:outline-none focus:ring-4 focus:ring-primary/50">
+                    <i class="fas fa-comments mr-3"></i>
+                    Read More Testimonials
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+   
+
+  
+
+
+
+{% endblock %}
